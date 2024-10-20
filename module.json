@@ -15,14 +15,14 @@
         "url": "https://yourwebsite.com"
       }
     ],
-    "esmodules": ["scripts/idx.js"],
-    "styles": ["styles/dice-webrtc.css"],
-    "templates": ["templates/module-config.html"],
+    "esmodules": ["dist/scripts/idx.js"],
+    "styles": ["dist/styles/dice-webrtc.css"],
+    "templates": ["dist/templates/module-config.html"],
     "languages": [
       {
         "lang": "en",
         "name": "English",
-        "path": "languages/en.json"
+        "path": "dist/languages/en.json"
       }
     ],
     "url": "https://github.com/Tackyshot/foundry_webrtc_dice",
