@@ -1,0 +1,82 @@
+Generate a FoundryVTT module script that uses the npm package `peerjs` to establish Peer to Peer connections over webRTC. It would also use the npm package `qrcode` to display a scannable peer id to the user., The external peer will use the QR code to attempt the connection from the 3rd party device. The module script should not need functionality to connect itself., The qr code should leverage the FoundryVTT ChatMessage API to display the QR code in the chat type as a self roll, Include event handling functionality to send all FoundryVTT Chat Messages through the peerjs connection.
+
+--
+
+Generate a FoundryVTT module script.
+
+<npm_dependencies>
+- `peerjs` WebRTC module
+- `qrcode` QRCode generator
+</npm_dependencies>
+
+<core_features>
+- Generate QR Code containing a peer_id.
+- Leverage FoundryVTT ChatMessage API to display the generated QR Code privately.
+- Using peerjs Allow WebRTC peer connections and receive messages with different message types from them.
+- Utilize FoundryVTT Actor API to synchronize Actor data they own with connected peers.
+- Leverage FoundryVTT Roll API and Actor API when receiving a manual roll message from connected peers to Parse actor data and equipped items and build a roll object to send to the roll API.
+- Utilize FoundryVTT Hooks API to send new Chat history to connected peers.
+</core_features>
+
+--
+
+
+Generate a FoundryVTT module script.
+
+<npm_dependencies>
+- `peerjs` WebRTC module
+- `qrcode` QRCode generator
+</npm_dependencies>
+
+
+
+--
+
+game.actors.search({ query: "", filters:[{ field: `ownership.${game.userId}`, value: 3}] })
+yobu.getRollData();
+const yobu = game.actors.getName("Yobu Ttob");
+
+Generate a FoundryVTT module script.
+
+<core_features>
+- Generate QR Code containing a peer_id using the `qrcode` npm package.
+- Leverage FoundryVTT ChatMessage.create() method to display the generated QR Code privately to the GM.
+- Utilize peerjs to establish WebRTC peer connections and handle different message types.
+- Use game.actors.contents and Actor.update() methods to synchronize owned Actor data with connected peers.
+- Implement a custom roll handler that:
+  - Receives manual roll messages from connected peers.
+  - Uses Actor.getRollData() to get actor data.
+  - Leverages Item.rollAttack() or Item.rollDamage() for equipped items.
+  - Constructs a Roll object using the FoundryVTT Roll class.
+  - Executes the roll using roll.evaluate() and displays results with roll.toMessage().
+- Utilize Hooks.on("createChatMessage", ...) to send new chat messages to connected peers.
+</core_features>
+
+<additional_considerations>
+- Implement proper peer connection cleanup using peer.destroy() when the module is disabled or the game closes.
+- Use game.user.isGM to restrict certain functionalities to the GM only.
+- Leverage game.settings.register() to add module configuration options.
+- Implement a simple UI using Application class for managing connections and viewing status.
+</additional_considerations>
+
+<performance_optimization>
+- Implement efficient data serialization for Actor synchronization:
+  - Use Actor.toObject() for full data and getEmbeddedCollection() for partial updates.
+- Use foundry.utils.debounce() for handling frequent updates like token movements.
+- Implement selective updates by comparing data before sending:
+  - Use foundry.utils.mergeObject() to create delta updates.
+</performance_optimization>
+
+<user_experience>
+- Use game.settings.registerMenu() to create a configuration menu in module settings.
+- Leverage Notifications API (ui.notifications) for user-friendly messages.
+- Use Dialog class for displaying important information or confirmation prompts.
+</user_experience>
+
+<security_considerations>
+- Use game.user.id to uniquely identify users in peer connections.
+- Implement a handshake process using game.user.name and a shared secret for peer authentication.
+- Leverage game.users.current.role to restrict certain actions based on user roles.
+- Use foundry.data.validators for input validation before processing peer messages.
+</security_considerations>
+

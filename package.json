@@ -1,0 +1,25 @@
+{
+  "name": "foundry_webrtc_test",
+  "version": "0.0.1",
+  "description": "test of webrtc connectivity to my react-native app",
+  "main": "index.js",
+  "scripts": {
+    "build": "rollup -c",
+    "develop": "rollup -c node:rollup-config-badger-den --config-den src/my-module:dev"
+  },
+  "author": "Dillon Osman",
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
+    "glob": "^11.0.0",
+    "rollup": "^4.24.0",
+    "rollup-config-badger-den": "^1.4.0",
+    "rollup-plugin-copy": "^3.5.0"
+  },
+  "dependencies": {
+    "peerjs": "^1.5.4",
+    "qrcode": "^1.5.4"
+  },
+  "type": "module"
+}
