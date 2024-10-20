@@ -2,7 +2,7 @@
     "id": "dice-webrtc-module",
     "title": "Dice WebRTC Module",
     "description": "A module for integrating WebRTC functionality for dice rolling in FoundryVTT.",
-    "version": "1.0.0",
+    "version": "0.0.1",
     "compatibility": {
       "minimum": "10",
       "verified": "12",
@@ -26,8 +26,8 @@
       }
     ],
     "url": "https://github.com/Tackyshot/foundry_webrtc_dice",
-    "manifest": "https://raw.githubusercontent.com/Tackyshot/foundry_webrtc_dice/main/dist/module.json",
-    "download": "https://github.com/Tackyshot/foundry_webrtc_dice/archive/v1.0.0.zip",
+    "manifest": "https://raw.githubusercontent.com/Tackyshot/foundry_webrtc_dice/main/dist/module.json?token=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",
+    "download": "https://github.com/Tackyshot/foundry_webrtc_dice/archive/v0.0.1.zip?token=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",
     "license": "MIT",
     "readme": "README.md",
     "bugs": "https://github.com/Tackyshot/foundry_webrtc_dice/issues",
