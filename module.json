@@ -25,11 +25,11 @@
         "path": "languages/en.json"
       }
     ],
-    "url": "https://github.com/Tackyshot/dice-webrtc-module",
-    "manifest": "https://raw.githubusercontent.com/Tackyshot/dice-webrtc-module/main/dist/module.json",
-    "download": "https://github.com/Tackyshot/dice-webrtc-module/archive/v1.0.0.zip",
+    "url": "https://github.com/Tackyshot/foundry_webrtc_dice",
+    "manifest": "https://raw.githubusercontent.com/Tackyshot/foundry_webrtc_dice/main/dist/module.json",
+    "download": "https://github.com/Tackyshot/foundry_webrtc_dice/archive/v1.0.0.zip",
     "license": "MIT",
     "readme": "README.md",
-    "bugs": "https://github.com/Tackyshot/dice-webrtc-module/issues",
+    "bugs": "https://github.com/Tackyshot/foundry_webrtc_dice/issues",
     "changelog": "CHANGELOG.md"
   }
