@@ -1,1 +1,3 @@
 node_modules/
+dist/
+./dice-webrtc-module.zip

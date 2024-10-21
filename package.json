@@ -1,11 +1,14 @@
 {
   "name": "foundry_webrtc_test",
-  "version": "0.0.12",
+  "version": "0.0.13",
   "description": "test of webrtc connectivity to my react-native app",
   "main": "index.js",
   "scripts": {
     "build": "rollup -c",
-    "develop": "rollup -c node:rollup-config-badger-den --config-den src/my-module:dev"
+    "develop": "rollup -c node:rollup-config-badger-den --config-den src/my-module:dev",
+    "bump:patch": "bash release.sh patch",
+    "bump:minor": "bash release.sh minor",
+    "bump:major": "bash release.sh major"
   },
   "author": "Dillon Osman",
   "license": "ISC",

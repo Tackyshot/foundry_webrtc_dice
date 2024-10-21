@@ -5,6 +5,7 @@ class DiceWebRTCModule extends Application {
     static ID = 'dice-webrtc-module';
 
     constructor(options = {}) {
+        console.log('DiceWebRTCModule constructor');
         super(options);
         this.peer = null;
         this.activeConnections = new Map();
