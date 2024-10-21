@@ -12,7 +12,7 @@ class DiceWebRTCModule extends Application {
     }
 
     static get defaultOptions() {
-        return mergeObject(super.defaultOptions, {
+        return super.mergeObject(super.defaultOptions, {
             id: this.ID,
             title: 'Dice WebRTC Module',
             template: `modules/${this.ID}/templates/module-config.html`,

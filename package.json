@@ -1,6 +1,6 @@
 {
   "name": "foundry_webrtc_test",
-  "version": "0.0.14",
+  "version": "0.0.16",
   "description": "test of webrtc connectivity to my react-native app",
   "main": "index.js",
   "scripts": {
