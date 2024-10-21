@@ -1,37 +1,37 @@
 <form>
     <h2>Dice WebRTC Module Configuration</h2>
     
-    <div class="form-group">
-        <label for="connection-secret">Connection Secret:</label>
+    <div class="dice-webrtc-form-group">
+        <label for="connection-secret">{{localize "diceWebRTC.ConnectionSecret"}}</label>
         <input type="password" id="connection-secret" name="connection-secret" value="{{secret}}">
-        <p class="notes">Enter a shared secret for authenticating peer connections.</p>
+        <p class="dice-webrtc-notes">{{localize "diceWebRTC.Notes"}}</p>
     </div>
 
-    <div class="form-group">
+    <div class="dice-webrtc-form-group">
         <button type="button" class="generate-qr">
-            <i class="fas fa-qrcode"></i> Generate QR Code
+            <i class="fas fa-qrcode"></i> {{localize "diceWebRTC.QRGenerateBtn"}}
         </button>
     </div>
 
-    <div class="form-group">
+    <div class="dice-webrtc-form-group">
         <button type="button" class="disconnect-all">
-            <i class="fas fa-unlink"></i> Disconnect All
+            <i class="fas fa-unlink"></i> {{localize "diceWebRTC.DisconnectAllBtn"}}
         </button>
     </div>
 
-    <div class="form-group">
-        <h3>Active Connections</h3>
+    <div class="dice-webrtc-form-group">
+        <h3>{{localize "diceWebRTC.ActiveConnections"}}</h3>
         <ul id="active-connections">
             {{#each activeConnections}}
             <li>{{this}}</li>
             {{else}}
-            <li>No active connections</li>
+            <li>{{localize "diceWebRTC.NoActiveConnections"}}</li>
             {{/each}}
         </ul>
     </div>
 
     <button type="submit">
-        <i class="fas fa-save"></i> Save Changes
+        <i class="fas fa-save"></i> {{localize "diceWebRTC.SaveChangesBtn"}}
     </button>
 </form>
 

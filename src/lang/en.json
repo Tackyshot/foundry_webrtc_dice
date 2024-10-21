@@ -1,0 +1,9 @@
+{
+    "diceWebRTC.QRGenerateBtn": "Generate QR Code",
+    "diceWebRTC.DisconnectAllBtn": "Disconnect All",
+    "diceWebRTC.Notes": "Enter a shared secret for authenticating peer connections.",
+    "diceWebRTC.ConnectionSecret": "Connection Secret",
+    "diceWebRTC.ActiveConnections": "Active Connections",
+    "diceWebRTC.NoActiveConnections": "No active connections",
+    "diceWebRTC.SaveChangesBtn": "Save Changes"
+}       
