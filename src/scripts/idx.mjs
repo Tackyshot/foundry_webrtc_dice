@@ -219,6 +219,8 @@ Hooks.once('init', () => {
 
 Hooks.once('ready', () => {
     game.dicewebrtc = new DiceWebRTCModule();
+
+    game.dicewebrtc.render(true);
 });
 
 Hooks.on('createChatMessage', (message, options, userId) => {
