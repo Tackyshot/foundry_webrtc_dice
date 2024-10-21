@@ -1,8 +1,9 @@
 import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
+// import typescript from '@rollup/plugin-typescript';
+import terser from '@rollup/plugin-terser';
 import copy from 'rollup-plugin-copy';
-import node_externals from 'rollup-plugin-node-externals';
-import { glob } from 'glob';
+import json from '@rollup/plugin-json';
 
 export default {
   input: 'src/scripts/idx.mjs',
@@ -12,18 +13,22 @@ export default {
     sourcemap: true,
   },
   plugins: [
-    node_externals(),
-    resolve({ browser: true }),
+    resolve({ 
+      browser: true,
+      preferBuiltins: false,
+    }),
     commonjs(),
+    json(),
+    // typescript({ tsconfig: './tsconfig.json' }),
+    terser(),
     copy({
       targets: [
         { src: 'src/**/*', dest: 'dist' },
         { src: ['module.json', 'README.md', 'CHANGELOG.md', 'LICENSE'], dest: 'dist' }
       ],
-      // Preserve the directory structure
       flatten: false,
-      // Don't copy .mjs files as they will be handled by rollup
-      ignore: ['**/*.mjs'],
+      ignore: ['**/*.mjs', '**/*.ts'],
     }),
   ],
+  external: ['foundry'],
 };

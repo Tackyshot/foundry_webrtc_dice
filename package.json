@@ -1,6 +1,6 @@
 {
   "name": "foundry_webrtc_test",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "test of webrtc connectivity to my react-native app",
   "main": "index.js",
   "scripts": {
@@ -13,8 +13,13 @@
   "author": "Dillon Osman",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.25.8",
+    "@babel/preset-env": "^7.25.8",
+    "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-json": "^6.1.0",
     "@rollup/plugin-node-resolve": "^15.3.0",
+    "@rollup/plugin-terser": "^0.4.4",
     "glob": "^11.0.0",
     "rollup": "^4.24.0",
     "rollup-config-badger-den": "^1.4.0",
