@@ -1,6 +1,6 @@
 {
   "name": "foundry_webrtc_test",
-  "version": "0.0.16",
+  "version": "0.0.33",
   "description": "test of webrtc connectivity to my react-native app",
   "main": "index.js",
   "scripts": {
@@ -28,7 +28,8 @@
   },
   "dependencies": {
     "peerjs": "^1.5.4",
-    "qrcode": "^1.5.4"
+    "qrcode": "^1.5.4",
+    "uuid": "^10.0.0"
   },
   "type": "module"
 }
